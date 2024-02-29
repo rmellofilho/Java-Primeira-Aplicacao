@@ -10,8 +10,10 @@ public class OutroLoop {
         while (nota != -1) {
             System.out.println("Diga sua avaliação para o filme ou -1 para encerrar ");
             nota = leitura.nextDouble();
-            mediaAvaliacao += nota;
-            totalDeNotas++;
+            if (nota != -1) {
+                mediaAvaliacao += nota;
+                totalDeNotas++;
+            }
         }
 
         System.out.println("Média de avaliações "+ mediaAvaliacao / totalDeNotas);
